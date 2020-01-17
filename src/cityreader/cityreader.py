@@ -32,7 +32,6 @@ def cityreader(cities=[]):
   
   with open('cities.csv') as cityFile:
     reader = csv.reader(cityFile)
-    next(reader)
     for row in reader:
       cities.append(City(row[0], float(row[3]), float(row[4])))
   return cities
@@ -101,7 +100,7 @@ def cityreader_stretch(lat1, lon1, lat2, lon2, cities=[]):
 
 
 
-first = input('\n\n\n\n\nEnter lat1,lon1: ')
+first = input('\n\nEnter lat1,lon1: ')
 splitFirst = first.split()
 second = input('Enter lat2,lon2: ')
 splitSecond = second.split()
